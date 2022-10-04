@@ -2,6 +2,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Avatar from '../components/Avatar';
 import { CgMenuGridO } from 'react-icons/cg';
+import { BiSearch } from 'react-icons/bi';
+import { IoMdMic } from 'react-icons/io';
+import { IoLeaf } from 'react-icons/io5';
 
 export default function Home() {
   return (
@@ -12,26 +15,80 @@ export default function Home() {
         <link rel="icon" href="/google-fav.png" />
       </Head>
 
-      {/* Header */}
-      <header className="flex w-full p-5 justify-between text-sm text-gray-700 font-semibold">
-        {/* Left */}
-        <div className="flex space-x-4 items-center">
-          <p className="link">About</p>
-          <p className="link">Store</p>
+      <div className="">
+        {/* Header */}
+        <header className="flex w-full p-5 justify-end text-sm text-gray-700">
+          <div className="flex space-x-4 items-center">
+            <p className="link">Gmail</p>
+            <p className="link">Images</p>
+            {/* Icon */}
+            <CgMenuGridO className="h-10 w-10 rounded-full hover:bg-gray-200 cursor-pointer p-[7px]" />
+            {/* Avatar */}
+            <Avatar url="/profile-pic.jpg" />
+          </div>
+        </header>
+        {/* Body */}
+        <form className="flex flex-col items-center justify-center">
+          <div className="pb-[30px] pt-[80px] flex flex-col items-center justify-center">
+            <Image
+              src="/google-logo.png"
+              width={250}
+              height={85}
+              alt="google-image"
+            />
+          </div>
+          <div className="md:w-[40vw] w-[80vw] flex ring-offset-2 ring-[1.5px] hover:shadow-lg rounded-[50px] ring-gray-200">
+            <BiSearch className="h-10 w-5 md:mx-3 mx-[10px]  text-gray-500" />
+            <input
+              type="text"
+              className="focus:outline-none flex-1 rounded-[50px]"
+            />
+            <IoMdMic className="h-10 w-5 md:mx-3 mx-[10px] text-blue-500 cursor-pointer" />
+          </div>
+          <div className="flex space-x-[15px] mt-[30px]">
+            <button className="bg-gray-100 px-[20px] py-[10px] rounded-[10px] hover:ring-[1.5px] hover:ring-gray-300 ">
+              Google Search
+            </button>
+            <button className="bg-gray-100 px-[20px] py-[10px] rounded-[10px] hover:ring-[1.5px] hover:ring-gray-300 ">
+              I'm Feeling Lucky
+            </button>
+          </div>
+          <div className="flex space-x-[10px] text-[14px] mt-[30px]">
+            <p>Google offered in:</p>
+            <p className="text-blue-700 link">Hausa</p>
+            <p className="text-blue-700 link">Igbo</p>
+            <p className="text-blue-700 link">Èdè Yorùbá</p>
+            <p className="text-blue-700 link">Nigerian Pidgin</p>
+          </div>
+        </form>
+
+        {/* Footer */}
+        <div className="w-full bg-gray-200 py-[10px] mt-[50px] fixed bottom-0 text-[14px] divide-y-[1px] divide-black/10">
+          <div className="flex py-[10px] px-[50px]">
+            <p className="text-black/70">Nigeria</p>
+          </div>
+          <div className="flex py-[10px] space-x-[30px] justify-between px-[50px]">
+            <div className="flex space-x-[280px]">
+              <div className="flex space-x-[30px]">
+                <p className="text-black/70">About</p>
+                <p className="text-black/70">Advertising</p>
+                <p className="text-black/70">Business</p>
+                <p className="text-black/70">How Search Works</p>
+              </div>
+              <div className="flex space-x-[5px] items-center">
+                <IoLeaf className="text-green-700 text-[20px]" />
+                <p className="text-black/70">Carbon neutral since 2007</p>
+              </div>
+            </div>
+
+            <div className="flex space-x-[30px]">
+              <p className="text-black/70">Privacy</p>
+              <p className="text-black/70">Terms</p>
+              <p className="text-black/70">Settings</p>
+            </div>
+          </div>
         </div>
-
-        {/* Right */}
-        <div className="flex space-x-4 items-center">
-          <p className="link">Gmail</p>
-          <p className="link">Images</p>
-
-          {/* Icon */}
-          <CgMenuGridO className="text-[30px] rounded-full hover:bg-gray-100 cursor-pointer" />
-
-          {/* Avatar */}
-          <Avatar url="/profile-pic.jpg" />
-        </div>
-      </header>
+      </div>
     </div>
   );
 }

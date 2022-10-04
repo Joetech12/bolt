@@ -28,8 +28,8 @@ export default function Home() {
           </div>
         </header>
         {/* Body */}
-        <form className="flex flex-col items-center justify-center">
-          <div className="pb-[30px] pt-[80px] flex flex-col items-center justify-center">
+        <form className="flex flex-col items-center justify-center py-[60px]  lg:py-[90px] 2xl:py-[140px]">
+          <div className="pb-[30px] flex flex-col items-center justify-center">
             <Image
               src="/google-logo.png"
               width={250}
@@ -63,28 +63,54 @@ export default function Home() {
         </form>
 
         {/* Footer */}
-        <div className="w-full bg-gray-200 py-[10px] mt-[50px] fixed bottom-0 text-[14px] divide-y-[1px] divide-black/10">
+        <div className="w-full bg-gray-100 py-[10px] mt-[50px] fixed bottom-0 text-[14px] divide-y-[1px] divide-black/10">
           <div className="flex py-[10px] px-[50px]">
             <p className="text-black/70">Nigeria</p>
           </div>
-          <div className="flex py-[10px] space-x-[30px] justify-between px-[50px]">
-            <div className="flex space-x-[280px]">
-              <div className="flex space-x-[30px]">
-                <p className="text-black/70">About</p>
-                <p className="text-black/70">Advertising</p>
-                <p className="text-black/70">Business</p>
-                <p className="text-black/70">How Search Works</p>
+
+          <div className="block py-[10px] space-x-[30px] space-y-[15px] px-[50px]">
+            <div className="lg:flex lg:justify-between">
+              <div className="lg:flex space-x-[30px] hidden">
+                <p className="text-black/70 link">About</p>
+                <p className="text-black/70 link">Advertising</p>
+                <p className="text-black/70 link">Business</p>
+                <p className="text-black/70 link">How Search Works</p>
               </div>
-              <div className="flex space-x-[5px] items-center">
+              <div className="flex space-x-[5px] items-center justify-center">
                 <IoLeaf className="text-green-700 text-[20px]" />
-                <p className="text-black/70">Carbon neutral since 2007</p>
+                <p className="text-black/70 link">Carbon neutral since 2007</p>
+              </div>
+              <div className="lg:flex space-x-[30px] hidden">
+                <p className="text-black/70 link">Privacy</p>
+                <p className="text-black/70 link">Terms</p>
+                <p className="text-black/70 link">Settings</p>
               </div>
             </div>
 
-            <div className="flex space-x-[30px]">
-              <p className="text-black/70">Privacy</p>
-              <p className="text-black/70">Terms</p>
-              <p className="text-black/70">Settings</p>
+            <div className="lg:hidden flex justify-center md:justify-evenly">
+              <div className="flex space-x-[30px]">
+                <p className="text-black/70 link">About</p>
+                <p className="text-black/70 link">Advertising</p>
+                <p className="text-black/70 link">Business</p>
+                <p className="text-black/70 link">How Search Works</p>
+              </div>
+              <div className="flex space-x-[5px] items-center justify-center hidden">
+                <IoLeaf className="text-green-700 text-[20px]" />
+                <p className="text-black/70 link">Carbon neutral since 2007</p>
+              </div>
+              <div className="md:flex space-x-[30px] hidden">
+                <p className="text-black/70 link">Privacy</p>
+                <p className="text-black/70 link">Terms</p>
+                <p className="text-black/70 link">Settings</p>
+              </div>
+            </div>
+
+            <div className="md:hidden flex justify-center">
+              <div className="flex space-x-[30px]">
+                <p className="text-black/70 link">Privacy</p>
+                <p className="text-black/70 link">Terms</p>
+                <p className="text-black/70 link">Settings</p>
+              </div>
             </div>
           </div>
         </div>

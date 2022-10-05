@@ -4,9 +4,23 @@ import Avatar from '../components/Avatar';
 import { CgMenuGridO } from 'react-icons/cg';
 import { BiSearch } from 'react-icons/bi';
 import { IoMdMic } from 'react-icons/io';
-import { IoLeaf } from 'react-icons/io5';
+import Footer from '../components/Footer';
+import { useRef } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Home() {
+  const router = useRouter();
+  const searchInputRef = useRef(null);
+
+  const search = (e) => {
+    e.preventDefault();
+    const term = searchInputRef.current.value;
+
+    if (!term) return;
+
+    router.push(`/search?term=${term}`);
+  };
+
   return (
     <div>
       <Head>
@@ -28,7 +42,7 @@ export default function Home() {
           </div>
         </header>
         {/* Body */}
-        <form className="flex flex-col items-center justify-center py-[60px]  lg:py-[90px] 2xl:py-[140px]">
+        <form className="flex flex-col items-center justify-center py-[15vh]  lg:py-[20vh] ">
           <div className="pb-[30px] flex flex-col items-center justify-center">
             <Image
               src="/google-logo.png"
@@ -40,16 +54,23 @@ export default function Home() {
           <div className="md:w-[40vw] w-[80vw] flex ring-offset-2 ring-[1.5px] hover:shadow-lg rounded-[50px] ring-gray-200">
             <BiSearch className="h-10 w-5 md:mx-3 mx-[10px]  text-gray-500" />
             <input
+              ref={searchInputRef}
               type="text"
               className="focus:outline-none flex-1 rounded-[50px]"
             />
             <IoMdMic className="h-10 w-5 md:mx-3 mx-[10px] text-blue-500 cursor-pointer" />
           </div>
           <div className="flex space-x-[15px] mt-[30px]">
-            <button className="bg-gray-100 px-[20px] py-[10px] rounded-[10px] hover:ring-[1.5px] hover:ring-gray-300 ">
+            <button
+              onClick={search}
+              className="bg-gray-100 px-[20px] py-[10px] rounded-[10px] hover:ring-[1.5px] hover:ring-gray-300 "
+            >
               Google Search
             </button>
-            <button className="bg-gray-100 px-[20px] py-[10px] rounded-[10px] hover:ring-[1.5px] hover:ring-gray-300 ">
+            <button
+              onClick={search}
+              className="bg-gray-100 px-[20px] py-[10px] rounded-[10px] hover:ring-[1.5px] hover:ring-gray-300 "
+            >
               I'm Feeling Lucky
             </button>
           </div>
@@ -63,57 +84,7 @@ export default function Home() {
         </form>
 
         {/* Footer */}
-        <div className="w-full bg-gray-100 py-[10px] mt-[50px] fixed bottom-0 text-[14px] divide-y-[1px] divide-black/10">
-          <div className="flex py-[10px] px-[50px]">
-            <p className="text-black/70">Nigeria</p>
-          </div>
-
-          <div className="block py-[10px] space-x-[30px] space-y-[15px] px-[50px]">
-            <div className="lg:flex lg:justify-between">
-              <div className="lg:flex space-x-[30px] hidden">
-                <p className="text-black/70 link">About</p>
-                <p className="text-black/70 link">Advertising</p>
-                <p className="text-black/70 link">Business</p>
-                <p className="text-black/70 link">How Search Works</p>
-              </div>
-              <div className="flex space-x-[5px] items-center justify-center">
-                <IoLeaf className="text-green-700 text-[20px]" />
-                <p className="text-black/70 link">Carbon neutral since 2007</p>
-              </div>
-              <div className="lg:flex space-x-[30px] hidden">
-                <p className="text-black/70 link">Privacy</p>
-                <p className="text-black/70 link">Terms</p>
-                <p className="text-black/70 link">Settings</p>
-              </div>
-            </div>
-
-            <div className="lg:hidden flex justify-center md:justify-evenly">
-              <div className="flex space-x-[30px]">
-                <p className="text-black/70 link">About</p>
-                <p className="text-black/70 link">Advertising</p>
-                <p className="text-black/70 link">Business</p>
-                <p className="text-black/70 link">How Search Works</p>
-              </div>
-              <div className="flex space-x-[5px] items-center justify-center hidden">
-                <IoLeaf className="text-green-700 text-[20px]" />
-                <p className="text-black/70 link">Carbon neutral since 2007</p>
-              </div>
-              <div className="md:flex space-x-[30px] hidden">
-                <p className="text-black/70 link">Privacy</p>
-                <p className="text-black/70 link">Terms</p>
-                <p className="text-black/70 link">Settings</p>
-              </div>
-            </div>
-
-            <div className="md:hidden flex justify-center">
-              <div className="flex space-x-[30px]">
-                <p className="text-black/70 link">Privacy</p>
-                <p className="text-black/70 link">Terms</p>
-                <p className="text-black/70 link">Settings</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Footer />
       </div>
     </div>
   );

@@ -64,7 +64,9 @@ const Header = () => {
           {/* Icon */}
           <CgMenuGridO className="h-10 w-10 rounded-full hover:bg-gray-200 cursor-pointer p-[7px]" />
           {/* Avatar */}
-          <Avatar url="/gmail.jpg" />
+          <a href="">
+            <Avatar url="/gmail.jpg" />
+          </a>
         </div>
       </header>
 
@@ -75,31 +77,31 @@ const Header = () => {
               <BiSearch className="h-10 w-5 mr-[5px] text-green-600" />
               <p className="text-green-600 hidden md:flex">All</p>
             </div>
-            <div className="flex items-center text-gray-500 cursor-pointer">
+            <div className="flex items-center text-gray-500 cursor-pointer hover:border-b-[3px] hover:border-green-600 hover:text-green-600">
               <MdOndemandVideo className="h-10 w-5 mr-[5px] " />
               <p className="hidden lg:flex">Videos</p>
             </div>
-            <div className="flex items-center text-gray-500 cursor-pointer">
+            <div className="flex items-center text-gray-500 cursor-pointer hover:border-b-[3px] hover:border-green-600 hover:text-green-600">
               <BiNews className="h-10 w-5 mr-[5px] " />
               <p className="hidden lg:flex">News</p>
             </div>
-            <div className="flex items-center text-gray-500 cursor-pointer">
+            <div className="flex items-center text-gray-500 cursor-pointer hover:border-b-[3px] hover:border-green-600 hover:text-green-600">
               <BiImage className="h-10 w-5 mr-[5px] " />
               <p className="hidden lg:flex">Images</p>
             </div>
-            <div className="items-center text-gray-500 cursor-pointer hidden md:flex">
+            <div className="items-center text-gray-500 cursor-pointer hidden md:flex hover:border-b-[3px] hover:border-green-600 hover:text-green-600">
               <BiBookBookmark className="h-10 w-5 mr-[5px] " />
               <p className="hidden lg:flex">Books</p>
             </div>
-            <div className="flex items-center text-gray-500 cursor-pointer">
+            <div className="flex items-center text-gray-500 cursor-pointer hover:border-b-[3px] hover:border-green-600 hover:text-green-600">
               <MdMoreVert className="h-10 w-5 mr-[1px] " />
               <p className="">More</p>
             </div>
-            <div className="flex items-center text-gray-500 cursor-pointer lg:hidden">
+            <div className="flex items-center text-gray-500 cursor-pointer lg:hidden hover:border-b-[3px] hover:border-green-600 hover:text-green-600">
               <p className="">Tools</p>
             </div>
           </div>
-          <div className="lg:flex items-center text-gray-500 cursor-pointer hidden">
+          <div className="lg:flex items-center text-gray-500 cursor-pointer hidden hover:border-b-[3px] hover:border-green-600 hover:text-green-600">
             <p className="">Tools</p>
           </div>
         </div>

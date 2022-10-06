@@ -79,7 +79,7 @@ export default function Home() {
             </button> */}
           </div>
           <div className="flex space-x-[10px] text-[14px] mt-[30px]">
-            <p>Google offered in:</p>
+            <p>Bolt Search in:</p>
             <p className="text-green-700 link">Hausa</p>
             <p className="text-green-700 link">Igbo</p>
             <p className="text-green-700 link">Èdè Yorùbá</p>

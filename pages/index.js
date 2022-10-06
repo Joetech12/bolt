@@ -14,7 +14,7 @@ export default function Home() {
 
   const search = (e) => {
     e.preventDefault();
-    const term = searchInputRef.current.value;
+    var term = searchInputRef.current.value;
 
     if (!term) return;
 
@@ -33,19 +33,21 @@ export default function Home() {
         {/* Header */}
         <header className="flex w-full p-5 justify-end text-sm text-gray-700">
           <div className="flex space-x-4 items-center">
-            <p className="link">Gmail</p>
+            <a href="https://mail.google.com" className="link">
+              Gmail
+            </a>
             <p className="link">Images</p>
             {/* Icon */}
             <CgMenuGridO className="h-10 w-10 rounded-full hover:bg-gray-200 cursor-pointer p-[7px]" />
             {/* Avatar */}
-            <Avatar url="/profile-pic.jpg" />
+            <Avatar url="/gmail.jpg" />
           </div>
         </header>
         {/* Body */}
         <form className="flex flex-col items-center justify-center py-[15vh]  lg:py-[20vh] ">
           <div className="pb-[30px] flex flex-col items-center justify-center">
             <Image
-              src="/google-logo.png"
+              src="/Bolt_logo.png"
               width={250}
               height={85}
               alt="google-image"
@@ -58,28 +60,28 @@ export default function Home() {
               type="text"
               className="focus:outline-none flex-1 rounded-[50px]"
             />
-            <IoMdMic className="h-10 w-5 md:mx-3 mx-[10px] text-blue-500 cursor-pointer" />
+            <IoMdMic className="h-10 w-5 md:mx-3 mx-[10px] text-green-700 cursor-pointer" />
           </div>
           <div className="flex space-x-[15px] mt-[30px]">
             <button
               onClick={search}
               className="bg-gray-100 px-[20px] py-[10px] rounded-[10px] hover:ring-[1.5px] hover:ring-gray-300 "
             >
-              Google Search
+              Bolt Search
             </button>
-            <button
+            {/* <button
               onClick={search}
               className="bg-gray-100 px-[20px] py-[10px] rounded-[10px] hover:ring-[1.5px] hover:ring-gray-300 "
             >
               I'm Feeling Lucky
-            </button>
+            </button> */}
           </div>
           <div className="flex space-x-[10px] text-[14px] mt-[30px]">
             <p>Google offered in:</p>
-            <p className="text-blue-700 link">Hausa</p>
-            <p className="text-blue-700 link">Igbo</p>
-            <p className="text-blue-700 link">Èdè Yorùbá</p>
-            <p className="text-blue-700 link">Nigerian Pidgin</p>
+            <p className="text-green-700 link">Hausa</p>
+            <p className="text-green-700 link">Igbo</p>
+            <p className="text-green-700 link">Èdè Yorùbá</p>
+            <p className="text-green-700 link">Nigerian Pidgin</p>
           </div>
         </form>
 
@@ -89,3 +91,5 @@ export default function Home() {
     </div>
   );
 }
+
+// export var refValue = term;

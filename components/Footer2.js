@@ -1,9 +1,9 @@
 import React from 'react';
 import { IoLeaf } from 'react-icons/io5';
 
-const Footer = () => {
+const Footer2 = () => {
   return (
-    <footer className="w-full grid bg-gray-100 py-[10px] mt-[50px] fixed bottom-0 text-[14px] divide-y-[1px] divide-black/10">
+    <footer className="w-full grid bg-gray-100 py-[10px] mt-[50px] text-[14px] divide-y-[1px] divide-black/10">
       <div className="px-8 py-3">
         <p className="text-black/70">Bolt Search - Nigeria</p>
       </div>
@@ -31,4 +31,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer2;

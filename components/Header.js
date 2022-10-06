@@ -64,7 +64,7 @@ const Header = () => {
           {/* Icon */}
           <CgMenuGridO className="h-10 w-10 rounded-full hover:bg-gray-200 cursor-pointer p-[7px]" />
           {/* Avatar */}
-          <a href="">
+          <a href="https://mail.google.com">
             <Avatar url="/gmail.jpg" />
           </a>
         </div>

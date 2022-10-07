@@ -39,19 +39,19 @@ const Header = () => {
             />
           </div>
 
-          <form className="md:w-[50vw] flex ring-offset-0 ring-[1.5px] hover:shadow-lg rounded-[50px] ring-gray-200 items-center flex-grow">
+          <form className="md:w-[50vw] w-[250px] flex ring-offset-0 ring-[1.5px] hover:shadow-lg rounded-[50px] ring-gray-200 items-center flex-grow">
             <input
               ref={searchInputRef}
               type="text"
-              className="focus:outline-none flex-1 rounded-[50px] px-[20px] "
+              className="focus:outline-none flex-1 rounded-[50px] pl-[5px] md:px-[20px]"
             />
             <AiOutlineClose
-              className="h-10 w-5 text-gray-500 cursor-pointer mx-[5px] mr-[10px] md:mr-[0px] transition duration-100 transform hover:scale-105"
+              className="h-10 w-5 text-gray-500 cursor-pointer mx-[5px] mr-[0px] md:mr-[0px] transition duration-100 transform hover:scale-105"
               onClick={() => (searchInputRef.current.value = '')}
             />
-            <TbMinusVertical className="h-10 w-5 text-gray-300 cursor-pointer mx-[2px] hidden md:flex" />
-            <IoMdMic className="h-10 w-5 text-green-700 cursor-pointer mx-[5px] hidden md:flex" />
-            <BiSearch className="h-10 w-5 ml-[10px] mr-[15px] text-gray-500 cursor-pointer hidden md:flex" />
+            <TbMinusVertical className="h-10 w-5 text-gray-300 cursor-pointer mx-[0px] md:mx-[2px] " />
+            <IoMdMic className="h-10 w-5 text-green-700 cursor-pointer mx-[0px] md:mx-[5px] hidden md:flex" />
+            <BiSearch className="h-10 w-5 ml-[0px] md:ml-[10px] mr-[15px] text-gray-500 cursor-pointer" />
             <button hidden type="submit" onClick={search}>
               Search
             </button>
@@ -62,9 +62,9 @@ const Header = () => {
           {/* Icon */}
           <IoSettingsSharp className="h-10 w-10 rounded-full hover:bg-gray-200 cursor-pointer p-[7px] hidden lg:flex" />
           {/* Icon */}
-          <CgMenuGridO className="h-10 w-10 rounded-full hover:bg-gray-200 cursor-pointer p-[7px]" />
+          <CgMenuGridO className="h-10 w-10 rounded-full hover:bg-gray-200 cursor-pointer p-[7px] hidden sm:flex" />
           {/* Avatar */}
-          <a href="https://mail.google.com" className='hidden sm:flex'>
+          <a href="https://mail.google.com" className="hidden sm:flex">
             <Avatar url="/gmail.jpg" />
           </a>
         </div>

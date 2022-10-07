@@ -39,11 +39,11 @@ const Header = () => {
             />
           </div>
 
-          <form className="md:w-[50vw] w-[250px] flex ring-offset-0 ring-[1.5px] hover:shadow-lg rounded-[50px] ring-gray-200 items-center flex-grow">
+          <form className=" flex ring-offset-0 ring-[1.5px] hover:shadow-lg rounded-[50px] ring-gray-200 items-center">
             <input
               ref={searchInputRef}
               type="text"
-              className="focus:outline-none rounded-[50px] pl-[5px] md:px-[20px] w-[140px]"
+              className="focus:outline-none rounded-[50px] pl-[5px] md:px-[20px] flex-grow"
             />
             <AiOutlineClose
               className="h-10 w-5 text-gray-500 cursor-pointer mx-[5px] mr-[0px] md:mr-[0px] transition duration-100 transform hover:scale-105"
@@ -51,7 +51,7 @@ const Header = () => {
             />
             <TbMinusVertical className="h-10 w-5 text-gray-300 cursor-pointer mx-[0px] md:mx-[2px] " />
             <IoMdMic className="h-10 w-5 text-green-700 cursor-pointer mx-[0px] md:mx-[5px] hidden md:flex" />
-            <BiSearch className="h-10 w-5 ml-[0px] md:ml-[10px] mr-[2px] md:mr-[15px] text-gray-500 cursor-pointer" />
+            <BiSearch className="h-10 w-5 ml-[0px] md:ml-[10px] mr-[7px] md:mr-[15px] text-gray-500 cursor-pointer" />
             <button hidden type="submit" onClick={search}>
               Search
             </button>

@@ -39,7 +39,7 @@ const Header = () => {
             />
           </div>
 
-          <form className=" flex ring-offset-0 ring-[1.5px] hover:shadow-lg rounded-[50px] ring-gray-200 items-center">
+          <form className=" flex ring-offset-0 ring-[1.5px] hover:shadow-lg rounded-[50px] ring-gray-200 items-center md:w-[50vw]">
             <input
               ref={searchInputRef}
               type="text"
@@ -71,7 +71,7 @@ const Header = () => {
       </header>
 
       <div className="w-full divide-black/10 text-[13px] md:text-[14px] border-b">
-        <div className="w-full flex  mt-[10px] md:pl-[200px] pl-[20px] justify-between md:w-[50vw] ">
+        <div className="w-full flex mt-[10px] md:pl-[200px] pl-[20px] justify-between md:w-[50vw] ">
           <div className="flex space-x-[30px] lg:mr-[4vw] xl:mr-[10vw] 2xl:mr-[15vw]">
             <div className="flex items-center border-b-[3px] border-green-600 cursor-pointer">
               <BiSearch className="h-10 w-5 mr-[5px] text-green-600" />

@@ -64,7 +64,7 @@ const Header = () => {
           {/* Icon */}
           <CgMenuGridO className="h-10 w-10 rounded-full hover:bg-gray-200 cursor-pointer p-[7px]" />
           {/* Avatar */}
-          <a href="https://mail.google.com">
+          <a href="https://mail.google.com" className='hidden sm:flex'>
             <Avatar url="/gmail.jpg" />
           </a>
         </div>
@@ -97,7 +97,7 @@ const Header = () => {
               <MdMoreVert className="h-10 w-5 mr-[1px] " />
               <p className="">More</p>
             </div>
-            <div className="flex items-center text-gray-500 cursor-pointer lg:hidden hover:border-b-[3px] hover:border-green-600 hover:text-green-600">
+            <div className="items-center text-gray-500 cursor-pointer lg:hidden hover:border-b-[3px] hover:border-green-600 hover:text-green-600 hidden sm:flex">
               <p className="">Tools</p>
             </div>
           </div>

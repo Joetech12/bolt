@@ -83,7 +83,9 @@ export default function Home() {
             <p className="text-green-700 link">Hausa</p>
             <p className="text-green-700 link">Igbo</p>
             <p className="text-green-700 link">Èdè Yorùbá</p>
-            <p className="text-green-700 link">Nigerian Pidgin</p>
+            <p className="text-green-700 link hidden sm:flex">
+              Nigerian Pidgin
+            </p>
           </div>
         </form>
 

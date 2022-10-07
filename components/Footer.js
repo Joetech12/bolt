@@ -3,8 +3,8 @@ import { IoLeaf } from 'react-icons/io5';
 
 const Footer = () => {
   return (
-    <footer className="w-full grid bg-gray-100 py-[10px] mt-[50px] fixed bottom-0 text-[14px] divide-y-[1px] divide-black/10">
-      <div className="px-8 py-3">
+    <footer className="w-full grid bg-gray-100 py-[10px] mt-[50px] text-[14px] divide-y-[1px] divide-black/10">
+      <div className="px-8 py-3 flex justify-center md:justify-start">
         <p className="text-black/70">Bolt Search - Nigeria</p>
       </div>
 
@@ -18,7 +18,7 @@ const Footer = () => {
           <p className="text-black/70 link">About</p>
           <p className="text-black/70 link">Advertising</p>
           <p className="text-black/70 link">Business</p>
-          <p className="text-black/70 link">How Search Works</p>
+          <p className="text-black/70 link hidden md:flex">How Search Works</p>
         </div>
 
         <div className="flex justify-center space-x-8 md:ml-auto">
